@@ -1,26 +1,40 @@
 /* Tag Selectors */
 body{
     height:100vh;
-    background:repeating-linear-gradient(45deg,grey,white);
+    background:repeating-linear-gradient(45deg,#6648c4,#3f2da5);
+    font-family: 'Josefin Sans', sans-serif;
 }
 header{
-    margin:5% 0;
+    margin:1% 0;
 }
 
 /* Class Selectors */
-.title{
+.title h1{
+    font-family: 'Josefin Sans';
     text-align: center;
+    font-size:4rem;
+    font-size:bold;
+    letter-spacing: -3px;
+    color:#ffd033;
+    text-shadow:   1px 1px rgb(151, 151, 151);
+}
+.red-letter{
+    color:#eb1750;
 }
 .body-Tic-Tac-Toe{
+    background-color:#6648c4;
     text-align:center;
+    padding:10px;
+    border-radius:5%;
+    display:inline-block;
 }
 
 .square{
     margin:4px 2px;
     border-radius:10px;
     text-align:center;
-    width:150px;
-    height:150px;
+    width:7rem;
+    height:7rem;
     background-color:#332267;
     border:1px solid #464646;
     display:inline-block;
@@ -34,24 +48,23 @@ header{
 .x-square:before{
     color:#eb1750;
     font-weight: bolder;
-    padding:0 45px;
-    top:0;
-    left:0%;
+    padding:0 26px;
+    left:0;
+    bottom:0;
     position:absolute;
     content:"X";
-    font-size:6.2rem;
+    font-size:5rem;
 }
 .o-square:before{
     content:"O";
     font-weight: bolder;
     color:#ffd033;
-    font-size:6.2em;
-    padding:0 37px;
-    top:0;
-    left:0%;
+    font-size:5rem;
+    padding:0 26px;
+    bottom:0;
+    left:0;
     position:absolute;
 }
 /* ID selectors */
 #game-section{
-    margin-top:10%;
 }
