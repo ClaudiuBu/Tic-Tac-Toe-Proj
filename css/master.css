@@ -1,0 +1,57 @@
+/* Tag Selectors */
+body{
+    height:100vh;
+    background:repeating-linear-gradient(45deg,grey,white);
+}
+header{
+    margin:5% 0;
+}
+
+/* Class Selectors */
+.title{
+    text-align: center;
+}
+.body-Tic-Tac-Toe{
+    text-align:center;
+}
+
+.square{
+    margin:4px 2px;
+    border-radius:10px;
+    text-align:center;
+    width:150px;
+    height:150px;
+    background-color:#332267;
+    border:1px solid #464646;
+    display:inline-block;
+    position:relative;
+}
+.square:hover{
+    transform:scale(1.1,1.1);
+    background-color:#ccc;
+    transition:0.5s;
+}
+.x-square:before{
+    color:#eb1750;
+    font-weight: bolder;
+    padding:0 45px;
+    top:0;
+    left:0%;
+    position:absolute;
+    content:"X";
+    font-size:6.2rem;
+}
+.o-square:before{
+    content:"O";
+    font-weight: bolder;
+    color:#ffd033;
+    font-size:6.2em;
+    padding:0 37px;
+    top:0;
+    left:0%;
+    position:absolute;
+}
+/* ID selectors */
+#game-section{
+    margin-top:10%;
+}
