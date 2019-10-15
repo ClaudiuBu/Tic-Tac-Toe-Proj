@@ -97,7 +97,6 @@ function decideWinner() {
             winner = "o"; //o won
             console.log(winner);
             displayResult(winner);
-
         }
         else;
     }
@@ -138,6 +137,7 @@ function updateBoard(arg1, arg2, arg3, arg) {
     $(".square-" + arg3.toString()).addClass(arg + "-square-win");
 
     $(".diagonal-line").addClass("visible");
+    $(".diagonal-line").addClass("col-" + arg1.toString()+"-"+ arg2.toString()+"-"+ arg3.toString());
 }
 
 function debug() {

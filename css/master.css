@@ -117,47 +117,47 @@ header{
 #game-section{
 }
 /* Win-line position  */
-.col-1{
+.col-0-3-6{
     bottom:2.8rem;;
     right:20.1rem;
     height:260px;
 }
-.col-2{
+.col-1-4-7{
     bottom:2.8rem;;
     right:12.5rem;
     height:260px;
 }
-.col-3{
+.col-2-5-8{
     bottom:2.8rem;;
     right:5rem;
     height:260px;
 }
-.col-1-row-1-diag{
+.col-2-5-7{
     bottom:0rem;
     right:13rem;
     height:350px;
     transform: rotate(45deg);
 }
-.col-1-row-3-diag{
+.col-0-4-8{
     bottom:0rem;
     right:12.6rem;
     height:350px;
     transform: rotate(-45deg);
 }
-.col-2-row-2{
+.col-3-4-5{
     bottom:3rem;
     right:12.6rem;
     height:260px;
     transform: rotate(90deg);
 }
-.top-row-col{
+.col-0-1-2{
     bottom:10.5rem;
     right:12.6rem;
     height:260px;
     transform: rotate(90deg);
 }
 
-.bottom-row-col{
+.col-6-7-8{
     top:4.5rem;
     right:12.6rem;
     height:260px;
