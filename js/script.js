@@ -53,6 +53,9 @@ function decideWinner() {
         if ((squares[i] == 1 && squares[i + 1] ==  1  && squares[i + 2] == 1) != 0) {
             squareOne = i; squareTwo = i + 1; squareThree = i + 2;
         }
+        else if((squares[i] == 2 && squares[i + 1] ==  2  && squares[i + 2] == 2) != 0){
+            squareOne = i; squareTwo = i + 1; squareThree = i + 2;
+        }
     }
     console.log(squareOne + "," + squareTwo + "," + squareThree);
     if (squares[0] == 1 && squares[1] == 1 && squares[2] == 1) {
@@ -61,8 +64,7 @@ function decideWinner() {
         console.log(winner);
         displayResult(winner);
     }
-    else if (squares[0] == squares[1] == squares[2] == 2 || squares[3] == squares[4] == squares[5] == 2
-        || squares[6] == squares[7] == squares[8] == 2) {
+    else if (squares[0] == 2 && squares[1] == 2 && squares[2] == 2) {
 
 
         console.log("A castigat O");
@@ -75,7 +77,7 @@ function decideWinner() {
 }
 function displayResult(arg) {
     switch (arg) {
-        case "x":
+        case "x","o":
             console.log("Am ajuns in caseul:" + arg);
             updateBoard(squareOne, squareTwo, squareThree, arg);
             break;
