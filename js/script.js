@@ -15,13 +15,13 @@ $('.square').click(function (e) {
                 displayX(this);
                 squares[parseInt(this.innerHTML, 10)] = 1;
                 console.log(this.innerHTML + ":" + squares[parseInt(this.innerHTML, 10)]);
-                decideWinner()
+                decideWinner();
             }
             else {
                 displayO(this);
                 squares[parseInt(this.innerHTML, 10)] = 2;
                 console.log(this.innerHTML + ":" + squares[parseInt(this.innerHTML, 10)]);
-                decideWinner()
+                decideWinner();
             }
         }
     }
@@ -47,37 +47,81 @@ function displayO(e) {
     console.log(onOff);
 }
 function decideWinner() {
-
+    //Check to see if the game is finished
     debug();
     for (var i = 0; i < squares.length; i++) {
-        if ((squares[i] == 1 && squares[i + 1] ==  1  && squares[i + 2] == 1) != 0) {
-            squareOne = i; squareTwo = i + 1; squareThree = i + 2;
+        if ((squares[i] == 1 && squares[i + 1] == 1
+            && squares[i + 2] == 1) || (squares[i] == 2
+                && squares[i + 1] == 2
+                && squares[i + 2] == 2)) {
+            squareOne = i;
+            squareTwo = i + 1;
+            squareThree = i + 2;
+            if (squareOne == 0 && squareTwo == 1 && squareThree == 2 ||
+                squareOne == 3 && squareTwo == 4 && squareThree == 5 ||
+                squareOne == 6 && squareTwo == 7 && squareThree == 8) {
+                checkWin(i);
+            }
         }
-        else if((squares[i] == 2 && squares[i + 1] ==  2  && squares[i + 2] == 2) != 0){
-            squareOne = i; squareTwo = i + 1; squareThree = i + 2;
+        else if ((squares[i] == 1 && squares[i + 3] == 1 && squares[i + 6] == 1)
+            || (squares[i] == 2 && squares[i + 3] == 2 && squares[i + 6] == 2)) {
+            squareOne = i;
+            squareTwo = i + 3;
+            squareThree = i + 6;
+            checkWin(i);
+
         }
+        else if ((squares[i] == 1 && squares[i + 4] == 1 && squares[i + 8] == 1)
+            || (squares[i] == 2 && squares[i + 4] == 2 && squares[i + 8] == 2)) {
+
+            squareOne = i;
+            squareTwo = i + 4;
+            squareThree = i + 8;
+            checkWin(i);
+        }
+        else if (squares[i + 2] == 1 && squares[i + 4] == 1 && squares[i + 6] == 1) {
+            squareOne = i + 2;
+            squareTwo = i + 4;
+            squareThree = i + 6;
+            
+            winner = "x"; // x won
+            console.log(winner);
+            displayResult(winner);
+        }
+        else if (squares[i + 2] == 2 && squares[i + 4] == 2 && squares[i + 6] == 2) {
+
+            squareOne = i + 2;
+            squareTwo = i + 4;
+            squareThree = i + 6;
+            
+            winner = "o"; //o won
+            console.log(winner);
+            displayResult(winner);
+
+        }
+        else;
     }
     console.log(squareOne + "," + squareTwo + "," + squareThree);
-    if (squares[0] == 1 && squares[1] == 1 && squares[2] == 1) {
-        console.log("A castigat X");
-        winner = "x";
+}
+
+function checkWin(arg) {
+    console.log(squares[arg]);
+    if (squares[arg] == 1) {
+        winner = "x"; // x won
         console.log(winner);
         displayResult(winner);
     }
-    else if (squares[0] == 2 && squares[1] == 2 && squares[2] == 2) {
-
-
-        console.log("A castigat O");
-        winner = "o";
+    else if (squares[arg] == 2) {
+        winner = "o"; //o won
         console.log(winner);
         displayResult(winner);
     }
-    else return;
-
 }
 function displayResult(arg) {
+    console.log(arg);
     switch (arg) {
-        case "x","o":
+        case "x":
+        case "o":
             console.log("Am ajuns in caseul:" + arg);
             updateBoard(squareOne, squareTwo, squareThree, arg);
             break;
@@ -88,7 +132,7 @@ function displayResult(arg) {
 function updateBoard(arg1, arg2, arg3, arg) {
 
     console.log("Am ajuns in updateBoard");
-    console.log(arg1,arg2,arg3,arg);
+    console.log(arg1, arg2, arg3, arg);
     $(".square-" + arg1.toString()).addClass(arg + "-square-win");
     $(".square-" + arg2.toString()).addClass(arg + "-square-win");
     $(".square-" + arg3.toString()).addClass(arg + "-square-win");
@@ -101,8 +145,8 @@ function debug() {
         console.log("squares[" + i + "]=" + squares[i] + "si sunt " + squares.length + "elemente");
     }
 }
-//Jucatorul alege square.
-//Dupa alege compul din ce ramane
+    //Jucatorul alege square.
+    //Dupa alege compul din ce ramane
 
-//Game win conditions
+    //Game win conditions
 
