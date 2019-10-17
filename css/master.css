@@ -27,6 +27,9 @@ header{
 }
 
 /* Class Selectors */
+.container{
+    text-align:Center;
+}
 .title h1{
     font-family: 'Josefin Sans';
     text-align: center;
@@ -40,6 +43,7 @@ header{
     color:#eb1750;
 }
 .body-Tic-Tac-Toe{
+    display: none;
     background-color:#6648c4;
     text-align:center;
     padding:10px;
@@ -190,18 +194,23 @@ header{
 
 /* Main menu section */
 .btn{
-    width:300px;
+    width:250px;
     font-size:1.5rem !important;
     color:#a19e9e !important;
     font-weight:bold !important;
     color:#fff !important;
 }
+.btn img{
+    display:inline-block;
+}
+
 .border-buttons{
     border-radius:40px !important;
 }
 .main-menu-button{
     padding:2% 0%;
 }
+/* MultiPlayer route */
 .btn-multiplayer{
     background:repeating-linear-gradient(90deg,#f8578f,#f89e3a);
 }
@@ -210,6 +219,7 @@ header{
     color:#fff !important;
     box-shadow: 10px 10px 38px -10px #f89e3a;
 }
+/* Single Player route */
 .btn-single-player{
     background:repeating-linear-gradient(90deg,#dc2980,#a532f3);
 }
@@ -218,6 +228,60 @@ header{
     color:#fff !important;
     box-shadow: 10px 10px 38px -10px rgba(170,30,98,1);
 }
+    /* Second Single Player Menu */
+
+    .Difficulty-Title{
+        text-align:center !important;
+        color:#fff;
+        padding:2% 0%;
+    }
+    button img{
+    text-align:left;
+    }
+    .cont-but-img{
+        display:inline;
+        padding-right:1rem;
+    }
+    .clr{
+        clear:both;
+    }
+    .img-easy{
+        position:relative;
+        padding:0.3rem 0.5rem 0.1rem;
+        border-radius:100%;
+    }
+    .img-medium{
+        padding:0.3rem 0.2rem 0.1rem;
+        background:#fdda44;
+        border-radius:100%;
+        
+    }
+    .img-hard{
+        padding:0.3rem 0.2rem 0.1rem;
+        background:#e33067;  
+        border-radius:100%;  
+    }
+    .Difficulty-Title h2{
+        
+    }
+    span.underline-yellow{
+        border-bottom:3px solid yellow;
+        border-right:2px solid yellow;
+        border-radius:10px;
+    }
+
+    /* Color buttons */
+    .easy-color{
+        background:#532cd6 !important ;
+    }
+    .medium-color{
+        background-color:#e56433 !important;
+    }
+    .difficult-color{
+        background-color:#2c8ab4 !important;
+
+    }
+/* Local Multiplayer route */
 .btn-local-multiplayer{
     background:repeating-linear-gradient(90deg,#2cd67b,#249fee);
 }
