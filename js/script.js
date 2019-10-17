@@ -17,12 +17,15 @@ $('.square').click(function (e) {
                 squares[parseInt(this.innerHTML, 10)] = 1;
                 console.log(this.innerHTML + ":" + squares[parseInt(this.innerHTML, 10)]);
                 decideWinner();
+                toggleFade("player_2_turn","player_1_turn");
             }
             else {
                 displayO(this);
                 squares[parseInt(this.innerHTML, 10)] = 2;
                 console.log(this.innerHTML + ":" + squares[parseInt(this.innerHTML, 10)]);
                 decideWinner();
+                
+                toggleFade("player_1_turn","player_2_turn");
             }
         }
     }
@@ -164,3 +167,11 @@ function gameEnd(){
 
     //Game win conditions
 
+
+function toggleFade(classToFadeIn,classToFadeOut){
+
+    $('.'+classToFadeIn).fadeIn("slow",function(){
+        $('.'+classToFadeOut).fadeOut("slow",function(){
+        });
+    });
+}
