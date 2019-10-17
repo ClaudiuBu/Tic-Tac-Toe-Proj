@@ -30,9 +30,12 @@ function hardDificulty(){
 }
 
 function startGame(){
-        $('.singple-p-container').addClass("invisible");
-    $("#main-menu").addClass("display-none");
-     $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
-     // Animation complete
-      });
+        $('.singple-p-container').fadeOut("fast",function(){
+            $("#main-menu").addClass("display-none");
+            $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
+                // Animation complete
+                 });
+        });
+    
+
 }

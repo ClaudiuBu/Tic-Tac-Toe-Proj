@@ -2,6 +2,7 @@ var onOff, gameStart = true;
 var winner, squareOne, squareTwo, squareThree;
 var squares = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+
 $('.square').click(function (e) {
     if (gameStart == true) {
         if ($(this).hasClass('x-square') || $(this).hasClass('o-square')) {
@@ -138,12 +139,25 @@ function updateBoard(arg1, arg2, arg3, arg) {
 
     $(".diagonal-line").addClass("visible");
     $(".diagonal-line").addClass("col-" + arg1.toString()+"-"+ arg2.toString()+"-"+ arg3.toString());
+
+    gameEnd();
 }
 
 function debug() {
     for (var i = 0; i < squares.length; i++) {
         console.log("squares[" + i + "]=" + squares[i] + "si sunt " + squares.length + "elemente");
     }
+}
+function gameEnd(){
+    $(".title").children("h1:first-child").html("Game Over. Press <span>A</span> to retry");
+    $(".title").children("h1:nth-child(2)").text("");
+    $(".title").children("h1:nth-child(3)").text("");
+    document.addEventListener("keydown", event => {
+        if (event.isComposing || event.keyCode === 65) {
+            location.reload();
+        }
+        // do something
+      });
 }
     //Jucatorul alege square.
     //Dupa alege compul din ce ramane
