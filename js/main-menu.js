@@ -6,9 +6,7 @@ function singlePlayerClick(){
     console.log("Ajung in scriptul de single-player");
     $('.menu-container').fadeOut( "slow", function() {
         $(".singple-p-container").removeClass("invisible");
-        // $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
-        //     // Animation complete
-        //   });
+
       });
 
 }
@@ -19,4 +17,22 @@ function multiPlayerClick(){
 
 function localMultiPlayerClick(){
     console.log("Ajung in scriptul de local");
+}
+
+function easyDificulty(){
+    setTimeout(startGame(), 1000);
+}
+function mediumDificulty(){
+    setTimeout(startGame(), 1000);
+}
+function hardDificulty(){
+    setTimeout(startGame(), 1000);
+}
+
+function startGame(){
+        $('.singple-p-container').addClass("invisible");
+    $("#main-menu").addClass("display-none");
+     $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
+     // Animation complete
+      });
 }

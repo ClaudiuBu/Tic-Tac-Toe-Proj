@@ -191,6 +191,9 @@ header{
 .invisible{
     visibility: hidden;
 }
+.display-none{
+    display:none !important;
+}
 
 /* Main menu section */
 .btn{
