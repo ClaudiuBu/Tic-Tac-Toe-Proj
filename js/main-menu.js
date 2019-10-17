@@ -1,7 +1,5 @@
 // Main menu 
 
-alert("main-menu-script added");
-
 function singlePlayerClick(){
     console.log("Ajung in scriptul de single-player");
     $('.menu-container').fadeOut( "slow", function() {
@@ -34,7 +32,6 @@ function startGame(){
             $("#main-menu").addClass("display-none");
             $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
                 $('.score_board').removeClass("invisible");
-
                 // Animation complete
                  });
         });

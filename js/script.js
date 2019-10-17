@@ -1,12 +1,14 @@
 var onOff, gameStart = true;
 var winner, squareOne, squareTwo, squareThree;
 var squares = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var justOnce =1;
 
 
 $('.square').click(function (e) {
     if (gameStart == true) {
         if ($(this).hasClass('x-square') || $(this).hasClass('o-square')) {
             console.log(squares[parseInt(this.innerHTML, 10)]);
+            
             console.log("Nu intru in conditia de adaugare a clasei.");
 
         }
@@ -169,6 +171,12 @@ function gameEnd(){
 
 
 function toggleFade(classToFadeIn,classToFadeOut){
+    
+    if(justOnce==1){
+        console.log("Am intrat in conditie");
+        justOnce =0;
+        $('.its_my_turn').removeClass("invisible");
+    }
 
     $('.'+classToFadeIn).fadeIn("slow",function(){
         $('.'+classToFadeOut).fadeOut("slow",function(){
