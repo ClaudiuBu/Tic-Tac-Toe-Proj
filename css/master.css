@@ -9,6 +9,7 @@ header{
 }
 
 /* Class Selectors */
+
 .container{
     text-align:Center;
 }
@@ -23,6 +24,71 @@ header{
 .red-letter{
     color:#eb1750;
 }
+/* Game window */
+.player_1{
+}
+/* Game Head */
+/* Scoreboard */
+.score_board{
+    margin-bottom:45px;
+}
+.player_1, .player_2{
+    display:inline-block;
+    margin:1% 1% 0% 1%;
+    padding:1% 2% 0% 2%;
+    background-color:#28175c;
+    border:1px solid rgb(163, 162, 162);
+    border-radius:10px;
+    color:#fff;
+}
+.player_1 img, .player_2 img{
+    background-color:white;
+    padding: 0.5rem 0.5rem;
+    border-radius:100%;
+}
+.player_name_1 , .player_name_2{
+    margin-top:10px;
+
+}
+.player_1_sing{
+    position:relative;
+    bottom:20px;
+    transform: rotate(45deg);
+    margin-left:0.7rem;
+}
+.player_1 img{
+    background-color:#E455F7;
+    padding:0.6rem 0.6rem 0.3rem 0.6rem;
+}
+.player_2 img{
+    background-color:#fddb44;
+}
+.player_1_sign:before{
+
+    height:30px;
+    content:'\002B';
+    color:#eb1750;
+    font-weight: bolder;
+    font-size:2rem;
+    margin:0;
+}
+.player_2_sing{
+    position:relative;
+    bottom:20px;
+    transform: rotate(45deg);
+    margin-left:0.7rem;
+}
+.player_2_sign:before{
+
+    height:30px;
+    content:'\25CB';
+    color:#27d075;
+    font-weight: bolder;
+    font-size:2rem;
+    margin:0;
+
+}
+/* Game -body */
 .body-Tic-Tac-Toe{
     display: none;
     background-color:#6648c4;
@@ -118,6 +184,7 @@ header{
 }
 /* ID selectors */
 #game-section{
+    text-align:center;
 }
 /* Win-line position  */
 .col-0-3-6{

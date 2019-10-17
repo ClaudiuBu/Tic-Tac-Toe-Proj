@@ -33,6 +33,8 @@ function startGame(){
         $('.singple-p-container').fadeOut("fast",function(){
             $("#main-menu").addClass("display-none");
             $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
+                $('.score_board').removeClass("invisible");
+
                 // Animation complete
                  });
         });
