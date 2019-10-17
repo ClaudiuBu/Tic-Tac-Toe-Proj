@@ -20,7 +20,7 @@ body{
 @keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
-    100%
+    100%{background-position:0% 50%}
 }
 header{
     margin:1% 0;
@@ -184,6 +184,49 @@ header{
 .visible{
     visibility:visible;
 }
+.invisible{
+    visibility: hidden;
+}
+
+/* Main menu section */
+.btn{
+    width:300px;
+    font-size:1.5rem !important;
+    color:#a19e9e !important;
+    font-weight:bold !important;
+    color:#fff !important;
+}
+.border-buttons{
+    border-radius:40px !important;
+}
+.main-menu-button{
+    padding:2% 0%;
+}
+.btn-multiplayer{
+    background:repeating-linear-gradient(90deg,#f8578f,#f89e3a);
+}
+.btn-multiplayer:hover{
+    transition:1s;
+    color:#fff !important;
+    box-shadow: 10px 10px 38px -10px #f89e3a;
+}
+.btn-single-player{
+    background:repeating-linear-gradient(90deg,#dc2980,#a532f3);
+}
+.btn-single-player:hover{
+    transition:1s;
+    color:#fff !important;
+    box-shadow: 10px 10px 38px -10px rgba(170,30,98,1);
+}
+.btn-local-multiplayer{
+    background:repeating-linear-gradient(90deg,#2cd67b,#249fee);
+}
+.btn-local-multiplayer:hover{
+    transition:1s;
+    color:#fff !important;
+    box-shadow: 10px 10px 38px -10px #249fee;
+}
+
     /* left:50%;
     display:inline-block;
     position:absolute;

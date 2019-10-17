@@ -23,10 +23,7 @@
 
 <body>
   <header>
-
-
     <div class="container">
-
       <div class="title">
         <h1>T<span class="red-letter">i</span>C</h1>
         <h1><span class="red-letter">T</span>a<span class="red-letter">C</span></h1>
@@ -34,9 +31,25 @@
       </div>
   </header>
   <section id="game-section">
-
+    <section id="main-menu">
+      <div class="container menu-container" style="text-align:center">
+        <div class="row">
+          <div class="col">
+            <div class="main-menu-button">
+            <button type="button" name="button" onclick="singlePlayerClick()" class="btn btn-single-player border-buttons ">Single Player</button>
+            </div>
+            <div class="main-menu-button">
+            <button type="button" name="button" onclick="multiPlayerClick()" class="btn border-buttons btn-multiplayer">Multiplayer</button>
+            </div>
+            <div class="main-menu-button">
+            <button type="button" name="button" onclick="localMultiPlayerClick()" class="btn border-buttons btn-local-multiplayer">Local Multiplayer</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>
     <div class="container-fluid" style="text-align:center">
-      <div class="body-Tic-Tac-Toe">
+      <div class="body-Tic-Tac-Toe invisible">
 
         <div class="row">
           <div class="col m-auto">
@@ -84,6 +97,7 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/main-menu.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
 
