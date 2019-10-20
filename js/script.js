@@ -154,9 +154,9 @@ function debug() {
     }
 }
 function gameEnd(){
-    $(".title").children("h1:first-child").html("Game Over. Press <span>A</span> to retry");
+    $(".title").children("h1:first-child").html("");
     $(".title").children("h1:nth-child(2)").text("");
-    $(".title").children("h1:nth-child(3)").text("");
+    $(".title").children("h1").html("Game Over. Press <span>A</span> to retry");
     document.addEventListener("keydown", event => {
         if (event.isComposing || event.keyCode === 65) {
             location.reload();

@@ -25,24 +25,36 @@
   <header>
     <div class="container">
       <div class="title">
+        <div class="welcome-player">
+          <p id="player-name">Welcome Player</p>
+        </div>
+        <div class=".clr">
+
+        </div>
+        <br>
+        <br>
         <h1>T<span class="red-letter">i</span>C</h1>
         <h1><span class="red-letter">T</span>a<span class="red-letter">C</span></h1>
         <h1>T<span class="red-letter">o</span>E</h1>
       </div>
+
   </header>
   <section id="game-section">
     <section id="main-menu">
       <div class="container menu-container" style="text-align:center">
         <div class="row">
           <div class="col">
+            <form id="postForm">
+                <input type=" text" name="name" id="name1" placeholder="Nickname">
+            </form>
             <div class="main-menu-button">
-              <button type="button" name="button" onclick="singlePlayerClick()" class="btn btn-single-player border-buttons ">Single Player</button>
+              <button type="button" name="button" onclick="singlePlayerClick()" class="btn btn-single-player border-buttons " id="button1">Single Player</button>
             </div>
             <div class="main-menu-button">
-              <button type="button" name="button" onclick="multiPlayerClick()" class="btn border-buttons btn-multiplayer">Multiplayer</button>
+              <button type="button" name="button" onclick="multiPlayerClick()" class="btn border-buttons btn-multiplayer" id="button2">Multiplayer</button>
             </div>
             <div class="main-menu-button">
-              <button type="button" name="button" onclick="localMultiPlayerClick()" class="btn border-buttons btn-local-multiplayer">Local Multiplayer</button>
+              <button type="button" name="button" onclick="localMultiPlayerClick()" class="btn border-buttons btn-local-multiplayer" id="button3">Local Multiplayer</button>
             </div>
           </div>
         </div>
@@ -182,6 +194,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/main-menu.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
+  <script src="player-name.js" charset="utf-8"></script>
 </body>
 
 </html>

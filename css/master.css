@@ -7,11 +7,36 @@ body{
 header{
     margin:1% 0;
 }
-
+input{
+    border-radius:40px;
+    border:2px solid #000;
+    padding-left:10px;
+    width:13rem;
+    height:3rem;
+    background-color:#4C447C;
+    color:rgb(115, 103, 187);
+}
+.welcome-player{
+    display:none;
+}
 /* Class Selectors */
 
 .container{
     text-align:Center;
+}
+.title{
+
+}
+.welcome-player{
+    float:left;
+    
+
+}
+.welcome-player p{
+    color:#fff;
+}
+.clr{
+    clear:both;
 }
 .title h1{
     font-family: 'Josefin Sans';
@@ -23,6 +48,9 @@ header{
 }
 .red-letter{
     color:#eb1750;
+}
+.welcome-player{
+    display:inline-block;
 }
 /* Game window */
 .player_1{
