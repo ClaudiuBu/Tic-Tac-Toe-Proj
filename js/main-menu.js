@@ -11,12 +11,23 @@ function singlePlayerClick(){
 
 function multiPlayerClick(){
     console.log("Ajung in scriptul de multi-player");
+    $('.menu-container').fadeOut( "slow", function() {
+        $(".multiplayer").removeClass("invisible");
+
+      });
 }
 
 function localMultiPlayerClick(){
-    console.log("Ajung in scriptul de local");
-}
+    $('.menu-container').fadeOut( "slow", function() {
+        $(".local-multiplayer").removeClass("invisible");
 
+      });
+
+}
+function startGameLocal(){
+    setTimeout(startGame(), 1000);
+    localMultiplayer();
+}
 function easyDificulty(){
     setTimeout(startGame(), 1000);
 }
