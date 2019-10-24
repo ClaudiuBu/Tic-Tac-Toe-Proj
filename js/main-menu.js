@@ -30,12 +30,15 @@ function startGameLocal(){
 }
 function easyDificulty(){
     setTimeout(startGame(), 1000);
+    singlePlayerStart("easy");
 }
 function mediumDificulty(){
     setTimeout(startGame(), 1000);
+    singlePlayerStart("medium");
 }
 function hardDificulty(){
     setTimeout(startGame(), 1000);
+    singlePlayerStart("hard");
 }
 
 function startGame(){
@@ -43,6 +46,7 @@ function startGame(){
             $("#main-menu").addClass("display-none");
             $('.body-Tic-Tac-Toe').removeClass("invisible").fadeIn( "fast", function() {
                 $('.score_board').removeClass("invisible");
+                $('.title').addClass("invisible");
                 // Animation complete
                  });
         });

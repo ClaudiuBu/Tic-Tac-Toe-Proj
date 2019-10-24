@@ -11,32 +11,6 @@ body{
 
 }
 
-.star{
-    background-image: 
-    radial-gradient(white, rgba(255,255,255,.2) 0.5% 1px, transparent 2px),
-    radial-gradient(white, rgba(255,255,255,.15) 0.5%  1px, transparent 1px),
-    radial-gradient(white, rgba(255,255,255,.1) 1% 1px, transparent 2px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 1px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 150px 40px, 150px 40px, 40px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 170px 200px,30px 40px, 530px 570px, 10px 90px;
-    animation:infinite 60s animStar;
-}
-@keyframes animStar{
- 
-    0%	{
-        background-position:0px 0px;
-    }
-
-    25%{
-            background-position:-100px -200px;
-    }
-    50%{
-        background-position: 100px 1000px;
-    }
-    100%{
-        background-position:-100px -200px;
-    }
-}
 
 header{
     margin:1% 0;
@@ -48,7 +22,10 @@ input{
     width:13rem;
     height:3rem;
     background-color:#4C447C;
-    color:rgb(115, 103, 187);
+    color:rgb(155, 139, 250);
+}
+label{
+    color:#fff;
 }
 .welcome-player{
     display:none;
@@ -58,8 +35,32 @@ input{
 .container{
     text-align:Center;
 }
-.title{
+.star{
+    background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 1% 2px, transparent 5px),
+    radial-gradient(white, rgba(255,255,255,.15) 1%  1px, transparent 3px),
+    radial-gradient(white, rgba(255,255,255,.1) 1% 2px, transparent 2px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 1px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 170px 200px,30px 40px, 530px 570px, 10px 90px;
+    animation:infinite 120s animStar;
+}
+@keyframes animStar{
+ 
+    0%	{
+        background-position:0px 0px;
+    }
 
+    25%{
+            background-position:-100px -200px;
+        
+    }
+    50%{
+        background-position: 100px 1000px;
+    }
+    100%{
+        background-position:-100px -200px;
+    }
 }
 .welcome-player{
     float:left;
@@ -99,9 +100,12 @@ input{
     margin:1% 1% 0% 1%;
     padding:1% 2% 0% 2%;
     background-color:#28175c;
-    border:1px solid rgb(163, 162, 162);
+    
     border-radius:10px;
     color:#fff;
+}
+.player_1_win, .player_2_win{
+    border:1px solid rgb(163, 162, 162);
 }
 .player_1 img, .player_2 img{
     background-color:white;
@@ -150,6 +154,14 @@ input{
     margin:0;
 
 }
+.btn-start{
+    background-color:#27d075 !important;
+}
+.btn-start:hover{
+    transition:ease-in-out 0.3s;
+    background-color:#1ea85e !important;
+    border:1px solid transparent;
+}
 /* whose turn is it? */
 .its_my_turn{
     margin-bottom:20px;
@@ -188,7 +200,7 @@ input{
 }
 .square:hover{
     transform:scale(1.1,1.1);
-    background-color:#ccc;
+    background-color:#2a1c52;
     transition:0.5s;
 }
 .x-square:before{
@@ -202,7 +214,7 @@ input{
     transform:rotate(45deg);
 }
 .x-square-win:before{
-    transition:0.5s;
+    transition:ease-in 1s;
     content:'\002B';
     font-weight: bolder;
     bottom:-80px;
@@ -215,7 +227,7 @@ input{
     transform:rotate(45deg);
 }
 .o-square-win:before{
-    transition:0.5s;
+    transition:ease-in 1s;
     content:'\25CB';
     font-weight: bolder;
     padding:0 50px;
@@ -404,8 +416,7 @@ input{
     }
     span.underline-yellow{
         border-bottom:3px solid yellow;
-        border-right:2px solid yellow;
-        border-radius:10px;
+        border-radius:3px;
     }
 
     /* Color buttons */
