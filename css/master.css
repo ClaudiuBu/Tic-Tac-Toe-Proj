@@ -1,9 +1,43 @@
 /* Tag Selectors */
+html{
+    background:repeating-linear-gradient(90deg, #1f0f4e,#442dae) !important;
+    background-size:cover;
+    z-index:1;
+}
 body{
     height:100vh;
-    background:repeating-linear-gradient(90deg, #1f0f4e,#442dae);
+    background-color:transparent !important;
     font-family: 'Josefin Sans', sans-serif;
+
 }
+
+.star{
+    background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 0.5% 1px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.15) 0.5%  1px, transparent 1px),
+    radial-gradient(white, rgba(255,255,255,.1) 1% 1px, transparent 2px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 1px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 150px 40px, 150px 40px, 40px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 170px 200px,30px 40px, 530px 570px, 10px 90px;
+    animation:infinite 60s animStar;
+}
+@keyframes animStar{
+ 
+    0%	{
+        background-position:0px 0px;
+    }
+
+    25%{
+            background-position:-100px -200px;
+    }
+    50%{
+        background-position: 100px 1000px;
+    }
+    100%{
+        background-position:-100px -200px;
+    }
+}
+
 header{
     margin:1% 0;
 }

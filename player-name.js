@@ -8,20 +8,24 @@ $(".welcome-player").hide();
 function postPlayerName(e) {
 
     
-    if((document.getElementById("name2").value) !=""){
-        var player_name = document.getElementById("name2").value;
+    if((document.getElementById("player-1").value) !="" &&((document.getElementById("player-2").value) == "") ){
+        var player_name = document.getElementById("player-1").value;
+    }
+    else if(((document.getElementById("player-2").value) !="") && 
+    ((document.getElementById("player-1").value) !="")){
+        var player_name = document.getElementById("player-1").value + " and "+
+        document.getElementById("player-2").value;
     }
     else{
         var player_name = document.getElementById("name1").value;
     }
 
 
-    if(!player_name)player_name="Default";// daca nu alege un nume
+    if(!player_name)player_name="Player";// daca nu alege un nume
 
     console.log(player_name);
     console.log(default_name);
     e.preventDefault();
-    default_name= player_name;
     $("#player-name").text("Welcome "+player_name);
     $(".player_name_1 >p").text(player_name);
     $(".welcome-player").fadeIn("slow",function(){

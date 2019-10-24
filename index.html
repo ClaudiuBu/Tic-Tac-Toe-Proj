@@ -28,202 +28,203 @@
 
 </head>
 
-<body>
-  <header>
-    <div class="container">
-      <div class="title">
-        <div class="welcome-player">
-          <p id="player-name">Welcome Player</p>
-        </div>
-        <div class=".clr">
+<body class="star">
+    <header>
+      <div class="container">
+        <div class="title">
+          <div class="welcome-player">
+            <p id="player-name">Welcome Player</p>
+          </div>
+          <div class=".clr">
 
+          </div>
+          <br>
+          <br>
+          <h1>T<span class="red-letter">i</span>C</h1>
+          <h1><span class="red-letter">T</span>a<span class="red-letter">C</span></h1>
+          <h1>T<span class="red-letter">o</span>E</h1>
         </div>
-        <br>
-        <br>
-        <h1>T<span class="red-letter">i</span>C</h1>
-        <h1><span class="red-letter">T</span>a<span class="red-letter">C</span></h1>
-        <h1>T<span class="red-letter">o</span>E</h1>
-      </div>
 
-  </header>
-  <section id="game-section">
-    <section id="main-menu">
-      <div class="container menu-container" style="text-align:center">
-        <div class="row">
-          <div class="col">
-            <div class="main-menu-button">
-              <button type="button" name="button" onclick="singlePlayerClick()"
-                class="btn btn-single-player border-buttons " id="button1">Single Player</button>
-            </div>
-            <div class="main-menu-button">
-              <button type="button" name="button" onclick="multiPlayerClick()"
-                class="btn border-buttons btn-multiplayer" id="button2">Multiplayer</button>
-            </div>
-            <div class="main-menu-button">
-              <button type="button" name="button" onclick="localMultiPlayerClick()"
-                class="btn border-buttons btn-local-multiplayer" id="button3">Local Multiplayer</button>
+    </header>
+    <section id="game-section">
+      <section id="main-menu">
+        <div class="container menu-container" style="text-align:center">
+          <div class="row">
+            <div class="col">
+              <div class="main-menu-button">
+                <button type="button" name="button" onclick="singlePlayerClick()"
+                  class="btn btn-single-player border-buttons " id="button1">Single Player</button>
+              </div>
+              <div class="main-menu-button">
+                <button type="button" name="button" onclick="multiPlayerClick()"
+                  class="btn border-buttons btn-multiplayer" id="button2">Multiplayer</button>
+              </div>
+              <div class="main-menu-button">
+                <button type="button" name="button" onclick="localMultiPlayerClick()"
+                  class="btn border-buttons btn-local-multiplayer" id="button3">Local Multiplayer</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container singple-p-container invisible">
-        <div class="row">
-          <div class="col">
-            <div class="singpleP-menu-button">
+        <div class="container singple-p-container invisible">
+          <div class="row">
+            <div class="col">
+              <div class="singpleP-menu-button">
                 <form id="postForm">
-                    <input type=" text" name="name" id="name1" placeholder="Nickname" class="form-group">
-                  </form>
-              <div class="Difficulty-Title">
-                <h2><span class="underline-yellow">Select</span> Difficulty</h2>
-              </div>
+                  <input type=" text" name="name" id="name1" placeholder="Nickname" class="form-group">
+                </form>
+                <div class="Difficulty-Title">
+                  <h2><span class="underline-yellow">Select</span> Difficulty</h2>
+                </div>
 
-              <div class="main-menu-button">
-  
-                <button type="button" name="button" onclick="easyDificulty()" class=" easy-color  btn border-buttons " id="difficulty-1">
-                  <div class="cont-but-img">
-                    <img src="img/easy-bot.png" alt="easy dificulty" class="img-easy"
-                      style="background-color:#e455f7;position:relative;left:-1.5rem;">
-                  </div>
-                  Easy Bot
-                </button>
-              </div>
-              <div class="main-menu-button">
-                <button type="button" name="button" onclick="mediumDificulty()"
-                  class="btn medium-color border-buttons " id="difficulty-2">
-                  <div class="cont-but-img">
-                    <img src="img/medium-bot.png" alt="medium dificulty" class="img-medium" style="">
-                  </div>
-                  Medium Bot
-                </button>
-              </div>
-              <div class="main-menu-button">
+                <div class="main-menu-button">
 
-                <button type="button" name="button" onclick="hardDificulty()" id="difficulty-3"
-                  class="btn difficult-color border-buttons">
-                  <div class="cont-but-img">
-                    <img src="img/hard-bot.png" alt="hard dificulty" class="img-hard" style="">
-                  </div>
-                  Difficult Bot
-                </button>
-              </div>
+                  <button type="button" name="button" onclick="easyDificulty()" class=" easy-color  btn border-buttons "
+                    id="difficulty-1">
+                    <div class="cont-but-img">
+                      <img src="img/easy-bot.png" alt="easy dificulty" class="img-easy"
+                        style="background-color:#e455f7;position:relative;left:-1.5rem;">
+                    </div>
+                    Easy Bot
+                  </button>
+                </div>
+                <div class="main-menu-button">
+                  <button type="button" name="button" onclick="mediumDificulty()"
+                    class="btn medium-color border-buttons " id="difficulty-2">
+                    <div class="cont-but-img">
+                      <img src="img/medium-bot.png" alt="medium dificulty" class="img-medium" style="">
+                    </div>
+                    Medium Bot
+                  </button>
+                </div>
+                <div class="main-menu-button">
 
+                  <button type="button" name="button" onclick="hardDificulty()" id="difficulty-3"
+                    class="btn difficult-color border-buttons">
+                    <div class="cont-but-img">
+                      <img src="img/hard-bot.png" alt="hard dificulty" class="img-hard" style="">
+                    </div>
+                    Difficult Bot
+                  </button>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container local-multiplayer invisible">
+        <div class="container local-multiplayer invisible">
 
           <div>
             <label for="">Player 1 name:</label>
             <br>
-            <input type=" text" name="name" id="name2" placeholder="Nickname" class="form-group">
+            <input type=" text" name="player-1" id="player-1" placeholder="Nickname" class="form-group">
           </div>
           <div>
             <label for="">Player 2 name:</label>
             <br>
-            <input type="text" class="form-group">
+            <input type="text" name="player-2" id="player-2" class="form-group">
           </div>
           <div class="container">
-            <input type="submit" class="btn btn-primary" value="Start Game" onclick="startGameLocal()"  id="local-start">
+            <input type="submit" class="btn btn-primary" value="Start Game" onclick="startGameLocal()" id="local-start">
           </div>
-       
-      </div>
-      <div class="container invisible multiplayer">
-        <p>WORK IN PROGRESS</p>
-      </div>
-    </section>
-    <div class="container-fluid" style="text-align:center">
-      <div class="players-container">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="score_board invisible">
-                <div class="player_1">
-                  <img src="img/easy-bot.png" alt="Player 1 icon">
-                  <!-- Player 1 img  -->
-                  <div class="player_name_1">
-                    <p>Player 1</p>
-                  </div>
-                  <div class="player_1_sign">
-                  </div>
 
-                </div>
-                <div class="player_2">
-                  <img src="img/medium-bot.png" alt="Player 2 icon">
-                  <!-- Player 2 img  -->
-                  <div class="player_name_2">
-                    <p>Player 2</p>
-                  </div>
-                  <div class="player_2_sign">
-                  </div>
-                </div>
-              </div>
-              <div class="its_my_turn invisible">
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="player_1_turn">
-                        <p>Player 1 turn</p>
-                      </div>
-                      <div class="player_2_turn">
-                        <p>Player 2 turn</p>
-                      </div>
+        </div>
+        <div class="container invisible multiplayer">
+          <p>WORK IN PROGRESS</p>
+        </div>
+      </section>
+      <div class="container-fluid" style="text-align:center">
+        <div class="players-container">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="score_board invisible">
+                  <div class="player_1">
+                    <img src="img/easy-bot.png" alt="Player 1 icon">
+                    <!-- Player 1 img  -->
+                    <div class="player_name_1">
+                      <p>Player 1</p>
+                    </div>
+                    <div class="player_1_sign">
                     </div>
 
                   </div>
+                  <div class="player_2">
+                    <img src="img/medium-bot.png" alt="Player 2 icon">
+                    <!-- Player 2 img  -->
+                    <div class="player_name_2">
+                      <p>Player 2</p>
+                    </div>
+                    <div class="player_2_sign">
+                    </div>
+                  </div>
+                </div>
+                <div class="its_my_turn invisible">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <div class="player_1_turn">
+                          <p>Player 1 turn</p>
+                        </div>
+                        <div class="player_2_turn">
+                          <p>Player 2 turn</p>
+                        </div>
+                      </div>
 
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="body-Tic-Tac-Toe invisible">
+      <div class="body-Tic-Tac-Toe invisible">
 
-      <div class="row">
-        <div class="col m-auto">
-          <div class="square square-0">0
+        <div class="row">
+          <div class="col m-auto">
+            <div class="square square-0">0
+            </div>
+            <div class="square square-1">1
+            </div>
+            <div class="square square-2">2
+            </div>
           </div>
-          <div class="square square-1">1
+        </div>
+        <div class="row">
+          <div class="col m-auto">
+            <div class="square square-3">3
+            </div>
+            <div class="square square-4">4
+            </div>
+            <div class="square square-5">5
+            </div>
           </div>
-          <div class="square square-2">2
+        </div>
+        <div class="row">
+          <div class="col m-auto">
+            <div class="square square-6">6
+            </div>
+            <div class="square square-7">7
+            </div>
+            <div class="square square-8">8
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col m-auto">
-          <div class="square square-3">3
-          </div>
-          <div class="square square-4">4
-          </div>
-          <div class="square square-5">5
-          </div>
+      <div class="diagonal-line">
+        <div class="circles" style="top:-2%;">
+          <i class="fas fa-circle"></i>
         </div>
-      </div>
-      <div class="row">
-        <div class="col m-auto">
-          <div class="square square-6">6
-          </div>
-          <div class="square square-7">7
-          </div>
-          <div class="square square-8">8
-          </div>
+        <div class="line">
         </div>
-      </div>
-    </div>
-    <div class="diagonal-line">
-      <div class="circles" style="top:-2%;">
-        <i class="fas fa-circle"></i>
-      </div>
-      <div class="line">
-      </div>
-      <div class="circles" style="bottom:0%">
-        <i class="fas fa-circle"></i>
-      </div>
-    </div>
-    </div>
+        <div class="circles" style="bottom:0%">
+          <i class="fas fa-circle"></i>
+        </div>
+  </div>
   </section>
+  </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
